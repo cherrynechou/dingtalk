@@ -12,7 +12,7 @@
 
 ## 介绍
 
-EasyDingTalk 封装了钉钉身份验证、通讯录管理、消息通知、审批、群机器人、业务事件回调管理等服务端接口，让开发者可以使用简单的配置，提供简洁的 API 以供方便快速地调用钉钉接口。
+EasyDingTalk 封装了钉钉身份验证、通讯录管理、消息通知、审批、群机器人、业务事件回调管理等服务端接口，让开发者可以使用简单的配置，提供简洁的 API 以供方便快速地调用钉钉接口。(本项目是基于mingyoung/dingtalk，对只对其中的获取详情等接口做了升级，添加)
 
 ## 环境要求
 
@@ -22,7 +22,7 @@ EasyDingTalk 封装了钉钉身份验证、通讯录管理、消息通知、审�
 ## 安装
 
 ```bash
-composer require mingyoung/dingtalk:^2.0
+composer require talyang/dingtalk
 ```
 
 ## 使用
