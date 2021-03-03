@@ -44,6 +44,17 @@ class Client extends BaseClient
     }
 
     /**
+     * 获取部门列表v2
+     * @param int $dept_id
+     * @param null $lang
+     * @return mixed
+     */
+    public function listV2($dept_id = 1, $lang = null)
+    {
+        return $this->client->post('topapi/v2/department/listsub', compact('dept_id', 'lang'));
+    }
+
+    /**
      * 获取部门详情
      *
      * @param string $id

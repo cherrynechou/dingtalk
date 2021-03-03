@@ -89,6 +89,21 @@ class Client extends BaseClient
     }
 
     /**
+     * 获取部门用户详情
+     * @param $departmentId
+     * @param int $offset
+     * @param int $size
+     * @param null $order
+     * @param null $lang
+     * @return mixed
+     */
+    public function getDetailedUsersV2($departmentId, $offset = 0 , $size  = 10, $order = null, $lang = null){
+        return $this->client->post('topapi/v2/user/list', [
+            'dept_id' => $departmentId, 'cursor' => $offset, 'size' => $size, 'order_field' => $order, 'lang' => $lang,
+        ]);
+    }
+
+    /**
      * 获取管理员列表
      *
      * @return mixed
@@ -169,6 +184,18 @@ class Client extends BaseClient
     public function getUserByCode($code)
     {
         return $this->client->get('user/getuserinfo', compact('code'));
+    }
+
+    /**
+     * 企业内部应用免登获取用户 Userid
+     *
+     * @param string $code
+     *
+     * @return mixed
+     */
+    public function getUserByCodeV2($code)
+    {
+        return $this->client->get('topapi/v2/user/getuserinfo', compact('code'));
     }
 
     /**
