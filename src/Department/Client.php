@@ -68,6 +68,19 @@ class Client extends BaseClient
     }
 
     /**
+     * 获取部门详情V2
+     *
+     * @param string $id | 部门id
+     * @param string $lang | 语言
+     *
+     * @return mixed
+     */
+    public function getV2($id, $lang = null)
+    {
+        return $this->client->get('topapi/v2/department/get', compact('id', 'lang'));
+    }
+
+    /**
      * 查询部门的所有上级父部门路径
      *
      * @param string $id
