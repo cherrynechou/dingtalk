@@ -70,14 +70,14 @@ class Client extends BaseClient
     /**
      * 获取部门详情V2
      *
-     * @param string $id | 部门id
+     * @param string $dept_id | 部门id
      * @param string $lang | 语言
      *
      * @return mixed
      */
-    public function getV2($id, $lang = null)
+    public function getV2($dept_id, $lang = null)
     {
-        return $this->client->get('topapi/v2/department/get', compact('id', 'lang'));
+        return $this->client->get('topapi/v2/department/get', compact('dept_id', 'lang'));
     }
 
     /**
