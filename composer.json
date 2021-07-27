@@ -1,5 +1,5 @@
 {
-    "name": "talyang/dingtalk",
+    "name": "branchzero/dingtalk",
     "description": "this is update mingyoung/dingtalk, EasyDingTalk, Alibaba Dingtalk SDK for PHP",
     "license": "MIT",
     "keywords": [
@@ -10,7 +10,7 @@
         "钉钉"
     ],
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.0 || ^8.0",
         "overtrue/http": "1.2.0",
         "pimple/pimple": "^3.0",
         "psr/simple-cache": "^1.0",
