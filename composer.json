@@ -26,6 +26,10 @@
         {
             "name": "talyang",
             "email": "talyangtf@163.com"
+        },
+        {
+            "name": "branchzero",
+            "email": "branchzero@gmail.com"
         }
     ],
     "minimum-stability": "dev",
