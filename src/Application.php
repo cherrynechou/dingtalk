@@ -35,6 +35,7 @@ use Pimple\Container;
  * @property \EasyDingTalk\Attendance\Client $attendance
  * @property \EasyDingTalk\Department\Client $department
  * @property \EasyDingTalk\Conversation\Client $conversation
+ * @property \EasyDingTalk\Smartwork\Client $smartwork
  * @property \EasyDingTalk\Kernel\Http\Client $client
  * @property \Monolog\Logger $logger
  * @property \EasyDingTalk\Kernel\Server $server
@@ -67,6 +68,7 @@ class Application extends Container
         Attendance\ServiceProvider::class,
         Department\ServiceProvider::class,
         Conversation\ServiceProvider::class,
+        Smartwork\ServiceProvider::class,
         Kernel\Providers\ClientServiceProvider::class,
         Kernel\Providers\LoggerServiceProvider::class,
         Kernel\Providers\ServerServiceProvider::class,

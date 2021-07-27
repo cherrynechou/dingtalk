@@ -16,6 +16,34 @@ use EasyDingTalk\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
+     * 获取报表列值
+     *
+     * @param string   $date
+     * @param int|null $offset
+     * @param int|null $size
+     *
+     * @return mixed
+     */
+    public function getAttColumns()
+    {
+        return $this->client->post('topapi/attendance/getattcolumns');
+    }
+
+    /**
+     * 获取报表列值
+     *
+     * @param string   $date
+     * @param int|null $offset
+     * @param int|null $size
+     *
+     * @return mixed
+     */
+    public function getColumnVal($userid, $column_id_list, $from_date, $to_date)
+    {
+        return $this->client->postJson('topapi/attendance/getcolumnval', compact('userid', 'column_id_list', 'from_date', 'to_date'));
+    }
+
+    /**
      * 企业考勤排班详情
      *
      * @param string   $date
