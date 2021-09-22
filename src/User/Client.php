@@ -71,6 +71,22 @@ class Client extends BaseClient
     }
 
     /**
+     * 获取部门用户v2
+     * @param $dept_id
+     * @param $cursor
+     * @param $size
+     * @param null $order_field
+     * @param null $language
+     * @return array|\GuzzleHttp\Promise\PromiseInterface|object|\Overtrue\Http\Support\Collection|\Psr\Http\Message\ResponseInterface|string
+     */
+    public function getUsersV2($dept_id, $cursor, $size, $order_field = null, $language = null)
+    {
+        return $this->client->post('topapi/user/listsimple', [
+            'dept_id' => $dept_id, 'cursor' => $cursor, 'size' => $size, 'order_field' => $order_field, 'language' => $language,
+        ]);
+    }
+
+    /**
      * 获取部门用户详情
      *
      * @param int $departmentId
@@ -195,7 +211,7 @@ class Client extends BaseClient
      */
     public function getUserByCodeV2($code)
     {
-        return $this->client->get('topapi/v2/user/getuserinfo', compact('code'));
+        return $this->client->post('topapi/v2/user/getuserinfo', compact('code'));
     }
 
     /**

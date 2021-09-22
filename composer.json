@@ -30,6 +30,9 @@
         {
             "name": "branchzero",
             "email": "branchzero@gmail.com"
+        },{
+          "name": "cherrynechou",
+          "email": "iboy_2008@163.com"
         }
     ],
     "minimum-stability": "dev",
