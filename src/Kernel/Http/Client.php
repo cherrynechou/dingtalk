@@ -27,7 +27,7 @@ class Client extends BaseClient
      * @var array
      */
     protected static $httpConfig = [
-        'base_uri' => 'https://api.dingtalk.com',
+        'base_uri' => 'https://oapi.dingtalk.com',
     ];
 
     /**
